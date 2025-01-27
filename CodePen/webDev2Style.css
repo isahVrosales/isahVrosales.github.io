@@ -1,0 +1,20 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: lightpink;
+}
+.jump {
+	font-size: 5rem;
+	position: absolute;
+	animation: jump .5s infinite;
+}
+@keyframes jump {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-70px);
+	}
+}
