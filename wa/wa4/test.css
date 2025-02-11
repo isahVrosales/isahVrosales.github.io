@@ -38,5 +38,10 @@ body {
 
 .card header, .card footer {
   height: 3em;
-  padding:1 em;
+  padding: 1 em;
+}
+
+.card article {
+height: 12em;
+background-color: rgba(0,0,0,.5);
 }
