@@ -43,12 +43,13 @@ body {
 
 .card article {
 height: 12em;
-background-color: rgba(0, 0, 0, 0.022);
+background-color: rgba(0, 0, 0, 0.26);
 }
 
 .card header h2 {
 font-size: 2em;
 line-height: 3em;
+padding-left: .5em;
 }
 
 .card p, .card h2 {
@@ -58,10 +59,71 @@ margin: 0;
 .card footer p {
 font-size: 1.5em;
 line-height: 3em;
+padding-left: .5em;
 }
 
 .card article p {
   padding-left: 1em;
-  padding-top: 3em;
-  color: white
+  padding-top: 1.5em;
+  color: white;
+}
+
+
+.card2 {
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: rgb(82, 122, 225);
+  border: 0.2em solid rgb(244, 93, 93);
+  border-radius: 1.5em;
+}
+
+.card2 header {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+.card2 footer {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+  border-radius: 0 0 1.5em 1.5em;
+}
+
+.card2 article img {
+  max-height: 100%;
+  float: right;
+}
+
+.card2 header, .card footer {
+height: 5em;
+padding: 1 em;
+}
+
+.card2 article {
+height: 12em;
+background-color: rgba(0, 0, 0, 0.26);
+}
+
+.card2 header h2 {
+font-family: cursive;
+font-size: 2em;
+line-height: 3em;
+padding-left: .5em;
+}
+
+.card2 p, .card2 h2 {
+margin: 0;
+}
+
+.card2 footer p {
+font-family: cursive;
+font-size: 1.5em;
+line-height: 3em;
+padding-left: .5em;
+}
+
+.card2 article p {
+font-family: Georgia, 'Times New Roman', Times, serif;
+padding-left: 1em;
+padding-top: 1.5em;
+color: white;
 }
