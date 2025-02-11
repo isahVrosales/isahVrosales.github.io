@@ -54,3 +54,13 @@ line-height: 3em;
 .card p, .card h2{
 margin: 0;
 }
+
+.card footer p{
+font-size: 1.5em;
+line-height: 3em;
+}
+
+.card article p{
+  padding-left: 1em;
+  color: #f0f0f0
+}
