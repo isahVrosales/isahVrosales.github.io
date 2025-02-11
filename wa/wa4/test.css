@@ -43,7 +43,7 @@ body {
 
 .card article {
 height: 12em;
-background-color: rgba(0, 0, 0, 0.26);
+background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card header h2 {
@@ -100,7 +100,7 @@ padding: 1 em;
 
 .card2 article {
 height: 12em;
-background-color: rgba(0, 0, 0, 0.26);
+background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card2 header h2 {
