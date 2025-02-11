@@ -35,3 +35,8 @@ body {
     max-height: 100%;
     float: right;
   }
+
+.card header, .card footer {
+  height: 3em;
+  padding:1 em;
+}
