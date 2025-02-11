@@ -50,3 +50,7 @@ background-color: rgba(0,0,0,.5);
 font-size: 2em;
 line-height: 3em;
 }
+
+.card p, .card h2{
+margin: 0;
+}
