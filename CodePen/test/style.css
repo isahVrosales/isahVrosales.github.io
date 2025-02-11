@@ -81,7 +81,7 @@ body {
   background-color: #1b5b2f;
   border-radius: 0 7rem 7rem 0;
   overflow: hidden;
-  border-right: 1rem solid #ffc72c;
+  border-right: 1rem solid #000000;
   border-top: 0.5rem solid #ffc72c;
   border-bottom: 0.5rem solid #ffc72c;
   transition: transform 0.5s ease;
