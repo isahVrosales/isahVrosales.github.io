@@ -93,7 +93,7 @@ padding-left: .5em;
   float: right;
 }
 
-.card2 header, .card footer {
+.card2 header, .card2 footer {
 height: 5em;
 padding: 1 em;
 }
