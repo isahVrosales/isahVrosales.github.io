@@ -46,21 +46,22 @@ height: 12em;
 background-color: rgb(75, 77, 79);
 }
 
-.card header h2{
+.card header h2 {
 font-size: 2em;
 line-height: 3em;
 }
 
-.card p, .card h2{
+.card p, .card h2 {
 margin: 0;
 }
 
-.card footer p{
+.card footer p {
 font-size: 1.5em;
 line-height: 3em;
 }
 
-.card article p{
+.card article p {
   padding-left: 1em;
+  padding-top: 1.5em;
   color: white
 }
