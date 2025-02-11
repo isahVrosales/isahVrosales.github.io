@@ -43,7 +43,7 @@ body {
 
 .card article {
 height: 12em;
-background-color: rgba(0,0,0,.5);
+background-color: rgb(75, 77, 79);
 }
 
 .card header h2{
