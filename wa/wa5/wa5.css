@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    width: 600px;
+    margin: auto;
+}
+
+.main-image {
+    width: 100%;
+    display: block;
+}
+
+.score-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(120, 209, 238, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.score-overlay2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 215, 0, 0.9);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
