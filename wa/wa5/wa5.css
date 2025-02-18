@@ -1,33 +1,65 @@
-.container {
+html {
+    font-size: 16px;
+}
+
+body {
+    width: 100rem;
+    height: 62.5rem;
     position: relative;
-    width: 600px;
-    margin: auto;
+    font-family: Arial, sans-serif;
 }
 
-.main-image {
-    width: 100%;
-    display: block;
-}
-
-.score-overlay {
+.background {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background: rgba(120, 209, 238, 0.7);
+    width: 90em;
+    height: 52.5em;
+    background: url(i-got-the-chance-to-shoot-the-wallows-show-at-red-rocks-v0-r86qudem2xnd1.jpg) no-repeat;
+    background-size: cover;
+}
+
+.product-details {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 20px;
+    width: 30em;
+    height: auto;
+    top: 10em;
+    left: 5em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product-details h2 {
+    font-size: 1.5rem;
+    color: red;
+}
+
+.product-details p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.product-details .special {
+    background: red;
     color: white;
     padding: 10px;
+    font-size: 1.4rem;
+    text-align: center;
     border-radius: 5px;
-    font-size: 18px;
 }
 
-.score-overlay2 {
+.special-banner {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(255, 215, 0, 0.9);
-    color: black;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: white;
+    padding: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    width: 40%;
 }
