@@ -1,118 +1,112 @@
-@import url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap");
-
-@property --pixel-paint-colors {
-  syntax: "<color>#";
-  initial-value: #f8fafc, #f1f5f9, #cbd5e1;
-  inherits: false;
-}
-
-@property --pixel-paint-gap {
-  syntax: "<number>";
-  initial-value: 4;
-  inherits: false;
-}
-
-@property --pixel-paint-progress {
-  syntax: "<number>";
-  initial-value: 0;
-  inherits: true;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
 body {
-  height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: #888888;
+}
+svg {
+	height: auto;
 }
 
-body {
-  display: grid;
-  color: red;
-  font-family: system-ui, sans-serif;
+@keyframes fiskar {
+	0% {
+		transform: matrix(0.38,0.93,-0.93,0.38,133.3,126.2);
+		animation-timing-function: ease-out;
+	}
+	10.47% {
+		transform: matrix(0.24,0.97,-0.97,0.24,144.6,119.8);
+		animation-timing-function: ease-out;
+	}
+	19.77% {
+		transform: matrix(0.6,0.8,-0.8,0.6,117.1,139.8);
+		animation-timing-function: linear;
+	}
+	20.93% {
+		transform: matrix(0.38,0.93,-0.93,0.38,133.3,126.2);
+		animation-timing-function: ease-out;
+	}
+	31.4% {
+		transform: matrix(0.24,0.97,-0.97,0.24,144.6,119.8);
+		animation-timing-function: ease-out;
+	}
+	40.7% {
+		transform: matrix(0.7,0.72,-0.72,0.7,109.65,150.3);
+		animation-timing-function: linear;
+	}
+	44.19% {
+		transform: matrix(0.7,0.72,-0.72,0.7,109.65,150.3);
+		animation-timing-function: ease-in-out;
+	}
+	79.07% {
+		transform: matrix(0.21,-0.98,0.98,0.21,104.9,97.15);
+		animation-timing-function: ease-in;
+	}
+	82.56% {
+		transform: matrix(0.42,-0.91,0.91,0.42,119.6,118.1);
+		animation-timing-function: linear;
+	}
+	88.37% {
+		transform: matrix(0.38,0.93,-0.93,0.38,133.3,126.2);
+		animation-timing-function: ease-out;
+	}
+	94.19% {
+		transform: matrix(0.43,0.9,-0.9,0.43,128.4,129.55);
+		animation-timing-function: ease-in-out;
+	}
+	100% {
+		transform: matrix(0.38,0.93,-0.93,0.38,133.3,126.2);
+		animation-timing-function: linear;
+	}
+
 }
+@keyframes logFront {
+	0% {
+		transform: matrix(1,0,0,1,187.5,200.65);
+		animation-timing-function: linear;
+	}
+	88.37% {
+		transform: matrix(1,0,0,1,187.5,200.65);
+		animation-timing-function: ease-out;
+	}
+	94.19% {
+		transform: matrix(1,0.09,-0.09,1,187.5,203.25);
+		animation-timing-function: ease-in-out;
+	}
+	100% {
+		transform: matrix(1,0,0,1,187.5,200.65);
+		animation-timing-function: linear;
+	}
 
-main {
-  display: grid;
-  gap: 1rem;
-  padding: 1rem;
-  place-items: center;
-  place-content: center;
-  background: #09090b;
 }
+@keyframes logBack {
+	0% {
+		transform: matrix(1,0,0,1,168.75,193.25);
+		animation-timing-function: linear;
+	}
+	88.37% {
+		transform: matrix(1,0,0,1,168.4,193.9);
+		animation-timing-function: ease-out;
+	}
+	94.19% {
+		transform: matrix(1,-0.08,0.08,1,167.6,198.05);
+		animation-timing-function: ease-in-out;
+	}
+	100% {
+		transform: matrix(1,0,0,1,168.4,193.9);
+		animation-timing-function: linear;
+	}
 
-h1 {
-  --_deg: -10deg;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-block: 3vmin;
-  font-size: 15vmin;
-  font-family: "Fontdiner Swanky", serif;
-  text-align: center;
-  rotate: var(--_deg);
-  transform: skew(var(--_deg));
-
-  > :nth-child(1) {
-    grid-column: 1 / -1;
-  }
-
-  > :nth-child(2) {
-    margin-block-start: -0.25em;
-  }
-
-  > :nth-child(3) {
-    margin-block-start: -0.07em;
-  }
-
-  .tada {
-    font-size: 1.25em;
-    grid-column: 1 / -1;
-    grid-row: 3;
-    margin-block-start: -0.16em;
-    margin-inline-start: -0.75em;
-  }
-
-  .year {
-    grid-column: 2;
-    grid-row: 3;
-    margin-inline-start: 0.4em;
-    font-size: 3em;
-    letter-spacing: 0.02em;
-  }
 }
-
-.no-support {
-  line-height: 2;
-  text-align: center;
-  color: pink;
-  background-color: gold;
-  padding: 1rem;
-  border-radius: 0.25rem;
+#logFront {
+	animation: logFront 10s infinite;
+	animation-delay: 0s;
 }
-
-@supports (background-image: paint(pixel-paint)) {
-  .no-support {
-    display: none;
-  }
-
-  main {
-    --pixel-paint-colors: #09090b, #18181b, #27272a;
-    --pixel-paint-gap: 8;
-    background-image: paint(pixel-paint);
-    animation: 1s steps(30) infinite sparkle;
-  }
-
-  h1 {
-    color: transparent;
-    background-clip: text;
-    background-image: paint(pixel-paint);
-  }
-
-  @keyframes sparkle {
-    to {
-      --pixel-paint-progress: 1;
-    }
-  }
+#logBack {
+	animation: logBack 10s infinite;
+	animation-delay: 0s;
+}
+#fiskar {
+	animation: fiskar 10s infinite;
+	animation-delay: 0s;
 }
