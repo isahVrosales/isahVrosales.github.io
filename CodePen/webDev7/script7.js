@@ -12,7 +12,7 @@ const config = {
   surface: 8,
   specular: 6,
   exponent: 65,
-  light: 'hsla(0, 0%, 50%, 0.5)',
+  light: 'hsla(0, 0%, 0%, 0.5)',
   x: 50,
   y: 50,
   z: 65,
