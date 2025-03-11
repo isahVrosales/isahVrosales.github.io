@@ -1,13 +1,293 @@
-body{
-    color:white;
-    background-color:#09143C;
-    font-family: Arial, Arial, Helvetica, sans-serif;
+body {
+    font-family: 'Inter', sans-serif; 
+    background-color: #000000; 
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden; 
+    overflow-y:auto;
+    position: relative; 
 }
 
-header{
+.stars, .twinkling, .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1; 
+}
+
+.stars {
+    background: #000 url('stars.png') repeat top center;
+    z-index: 0;
+}
+
+.twinkling {
+    background: transparent url('twinkling.png') repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url('clouds.png') repeat top center;
+    z-index: 2;
+    opacity: 0.4;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+@keyframes move-clouds-back {
+    from { background-position: 0 0; }
+    to { background-position: 10000px 0; }
+}
+
+header {
+    padding: 30px 20px;
+    text-transform: uppercase;
+    position: relative; 
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    color: #999;
+    font-weight: 300;
+}
+
+.tour-schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative; 
+    z-index: 10;
+}
+
+.tour-row {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    gap: 8px;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out;
+}
+
+.tour-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tour-date {
+    color: #fce79a;
+    font-weight: bold;
+}
+
+.tour-venue, .tour-location {
+    color: #fff;
+}
+
+.tour-info a {
+    color: #00ffff;
+    text-decoration: none;
+    border: 1px solid #00ffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.tour-info a:hover {
+    background: #00ffff;
+    color: #0d0d0d;
+}
+
+.concert-description {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+    line-height: 1.6;
+    position: relative;
+    z-index: 10;
+}
+
+
+.concert-description h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.concert-description h4 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.concert-description p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+
+.concert-description ul {
+    padding-left: 20px;
+}
+
+.concert-description ul li {
+    margin-bottom: 5px;
+}
+
+
+.concert-description {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    text-align: left;
+    line-height: 1.7;
+    position: relative;
+    z-index: 10;
+}
+
+
+.concert-description h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fce79a;
+    text-transform: uppercase;
+    margin-bottom: 15px;
     text-align: center;
 }
 
-concert{
-    text-align: left;
+.concert-description p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+}
+
+
+.concert-description strong {
+    color: #00ffff;
+    font-weight: bold;
+}
+
+.concert-description em {
+    font-style: italic;
+    color: #f39c12;
+}
+
+
+.concert-description p:last-child {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-left: 4px solid #00ffff;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+
+@media (max-width: 400px) {
+    body {
+        font-size: 14px; 
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    .tour-schedule {
+        width: 95%;
+        grid-template-columns: 1fr; 
+    }
+
+    .tour-row {
+        font-size: 0.8rem;
+        padding: 12px;
+        flex-direction: column; 
+    }
+
+    .concert-description {
+        width: 90%;
+        padding: 12px;
+    }
+
+    .concert-description h2 {
+        font-size: 1.4rem;
+    }
+
+    .concert-description p {
+        font-size: 0.85rem;
+    }
+
+    .tour-info a {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+}
+
+
+@media (min-width: 1500px) {
+    body {
+        font-size: 18px; 
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+
+    .tour-schedule {
+        width: 70%;
+        grid-template-columns: repeat(2, 1fr); 
+
+    .concert-description {
+        width: 70%;
+        max-width: 1200px;
+        padding: 30px;
+    }
+
+    .concert-description h2 {
+        font-size: 2.5rem;
+    }
+
+    .concert-description p {
+        font-size: 1.1rem;
+    }
+
+    .tour-info a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}
 }
