@@ -6,24 +6,25 @@ function randomValueFromArray(array){
   return array[Math.floor(Math.random() * array.length)];
 }
 
-const storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.";
+const storyText = "A strange glow filled the sky as :insertx: wandered into :inserty:. Suddenly, they :insertz:. Bob watched from a distance, shaking their head—nothing surprised them anymore.";
 
 const insertX = [
-    "Willy the Goblin",
-    "Big Daddy",
-    "Father Christmas"
+    "Elijah Hewson",
+    "Luke Hemmings",
+    "Vic Fuentes"
     ];
 
 const insertY = [
-    "the soup kitchen",
-    "Disneyland",
-    "the White House"
+    "a mysterious underground bunker",
+"a floating castle in the sky",
+"the middle of a chaotic food fight"
 ];
 
 const insertZ = [
-    "spontaneously combusted",
-    "melted into a puddle on the sidewalk",
-    "turned into a slug and crawled away"
+    "vanished into thin air with a loud pop",
+"transformed into a giant marshmallow and bounced away",
+"started breakdancing uncontrollably until sunset"
+
 ];
 
 randomize.addEventListener('click', result);
