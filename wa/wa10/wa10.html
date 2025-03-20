@@ -4,20 +4,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title>Silly story generator</title>
+    <title>Silly Story Generator</title>
 
     <style>
+      
+      h1 {
+        font-size: 2 em;
+        width: 400px;
+      }
+      
       body {
-        font-family: helvetica, sans-serif;
-        width: 350px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 600px;
+        background-color: lightpink;
       }
 
       label {
         font-weight: bold;
+        
       }
 
       div {
-        padding-bottom: 20px;
+        padding-bottom: 10px;
       }
 
       input[type="text"] {
@@ -26,7 +34,7 @@
       }
 
       p {
-        background: #ffc125;
+        background: pink;
         color: #5e2612;
         padding: 10px;
         visibility: hidden;
@@ -35,14 +43,15 @@
   </head>
 
   <body>
+    <h1>Random Story Generator</h1>
     <div>
       <label for="customname">Enter custom name:</label>
       <input id="customname" type="text" placeholder="" />
     </div>
     <div>
-      <label for="us">US</label
+      <label for="us">U.S.</label
       ><input id="us" type="radio" name="ukus" value="us" checked />
-      <label for="uk">UK</label
+      <label for="uk">U.K.</label
       ><input id="uk" type="radio" name="ukus" value="uk" />
     </div>
     <div>
