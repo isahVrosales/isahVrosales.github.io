@@ -1,11 +1,17 @@
-h1 {
-  font-family: helvetica, arial, sans-serif;
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffd1dc; /* soft pink */
+  color: #0033cc; /* deep blue text */
   width: 640px;
   margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #0033cc;
 }
 
 .full-img {
@@ -15,24 +21,33 @@ body {
   height: 480px;
 }
 
+.displayed-img {
+  width: 100%;
+  height: auto;
+}
+
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 640px;
   height: 480px;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 button {
   border: 0;
-  background: rgba(150,150,150,0.6);
-  text-shadow: 1px 1px 1px white;
+  background: rgba(100, 100, 255, 0.6); /* soft blue button */
+  color: white;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px #0033cc;
   border: 1px solid #999;
   position: absolute;
   cursor: pointer;
   top: 2px;
   left: 2px;
+  padding: 6px 12px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .thumb-bar img {
