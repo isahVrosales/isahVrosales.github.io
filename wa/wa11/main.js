@@ -14,20 +14,18 @@ const altText = {
   'pic3.jpg': 'Purple and white pansies',
   'pic4.jpg': 'Section of wall from a pharaoh’s tomb',
   'pic5.jpg': 'Large moth on a leaf'
-}; 
-
-
+};
 
 /* Looping through images */
 for (const fileName of imageFilenames) {
   const newImage = document.createElement('img');
-  newImage.setAttribute('src', `images/${fileName}`);
+  newImage.setAttribute('src', fileName); // no "images/" prefix anymore
   newImage.setAttribute('alt', altText[fileName]);
   thumbBar.appendChild(newImage);
 
   // Click event to update the main image and alt text
   newImage.addEventListener('click', () => {
-    displayedImage.setAttribute('src', `images/${fileName}`);
+    displayedImage.setAttribute('src', fileName);
     displayedImage.setAttribute('alt', altText[fileName]);
   });
 }
