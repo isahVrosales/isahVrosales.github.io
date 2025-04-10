@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+.stars, .twinkling, .clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -3;
+}
+
+.stars {
+  background: #000 url('stars.png') repeat top center;
+  z-index: -3;
+}
+
+.twinkling {
+  background: transparent url('twinkling.png') repeat top center;
+  z-index: -2;
+  animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+  background: transparent url('clouds.png') repeat top center;
+  z-index: -4;
+  opacity: 0.4;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+@keyframes move-clouds-back {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 0; }
+}
+
+.app {
+  margin: 100px auto;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10;
+  position: relative;
+}
+
+header {
+  font-size: 30px;
+  color: #fce79a;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quotes {
+  min-height: 200px;
+}
+
+.quote-text {
+  padding-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.controls {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.button {
+  display: block;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.twitter:hover {
+  background-color: #1e7fbb;
+}
+
+.new-quote {
+  background-color: #4a2b0f;
+}
+
+.new-quote:hover {
+  background-color: #6d3b0e;
+}
+
+.new-quote:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    margin: 50px 20px;
+  }
+  .quote-text {
+    font-size: 18px;
+  }
+}
