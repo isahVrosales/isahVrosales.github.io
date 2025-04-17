@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticker Filter Text</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="text" contenteditable="true" spellcheck="false">
+      Move your mouse
+    </div>
+  </div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+    <defs>
+      <filter id="sticker">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="1" seed="14" result="turbulence"/>
+        <feColorMatrix in="turbulence" type="saturate" values="30" result="saturate"/>
+        <feMorphology in="SourceGraphic" operator="dilate" radius="10" result="morph"/>
+        <feFlood flood-color="#000" flood-opacity="1" result="flood"/>
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+        <feOffset in="saturate" dx="0" dy="0" result="offset"/>
+        <feComposite in="flood" in2="morph" operator="in" result="composite1"/>
+        <feDiffuseLighting in="blur" surfaceScale="10" diffuseConstant="1" lighting-color="#fff" result="light">
+          <fePointLight id="light" x="100" y="50" z="30"/>
+        </feDiffuseLighting>
+        <feComposite in="offset" in2="SourceGraphic" operator="atop" result="composite2"/>
+        <feComposite in="composite2" in2="composite1" operator="atop" result="composite3"/>
+        <feTurbulence type="fractalNoise" baseFrequency="3" numOctaves="1" seed="0" result="turb2"/>
+        <feComposite in="light" in2="composite3" operator="in" result="composite4"/>
+        <feBlend in="composite4" in2="composite3" mode="color-dodge" result="blend"/>
+        <feColorMatrix in="turb2" type="matrix" values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0.03 0 0 0 0" result="color"/>
+        <feComposite in="color" in2="blend" operator="atop"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
