@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catch the Digit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Catch the Digit</h1>
+  <p>Enter your 10-digit phone number to start. Then, click the correct digits in order as they bounce around.</p>
+
+  <div id="startArea">
+    <input type="text" id="realNumber" placeholder="e.g. 7205551234" maxlength="10" />
+    <button id="startGameBtn">Start Game</button>
+  </div>
+
+  <div id="gameArea" class="hidden">
+    <p id="instruction">Click the number: <span id="targetDigit"></span></p>
+    <div id="bubbleContainer"></div>
+  </div>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
