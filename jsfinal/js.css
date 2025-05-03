@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
+:root {
+  --primary: #f06292;
+  --accent: #4dd0e1;
+  --background: #fce4ec;
+  --text: #2e2e2e;
+  --highlight: #00796b;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+  background-color: var(--background);
+  color: var(--text);
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  padding-top: 60px; 
+  overflow-x: hidden;
+}
+
+#instructions {
+  background-color: var(--highlight);
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.container {
+  margin-top: 50px;
+  position: relative;
+  z-index: 20;
+}
+
+#drop-zone {
+  font-size: 2rem;
+  border: 3px solid var(--highlight);
+  background-color: white;
+  color: var(--text);
+  padding: 40px;
+  margin: 40px auto;
+  width: 350px;
+  letter-spacing: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 121, 107, 0.3);
+  position: relative;
+  z-index: 20;
+}
+
+#numbers {
+  display: none;
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: grab;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.3s ease;
+  user-select: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  animation: floaty 2s ease-in-out infinite;
+}
+
+.number:hover {
+  background-color: var(--highlight);
+  color: white;
+}
+
+#message {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--primary);
+  animation: fadeIn 1s ease;
+}
+
+#timer {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: var(--highlight);
+  font-weight: bold;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
